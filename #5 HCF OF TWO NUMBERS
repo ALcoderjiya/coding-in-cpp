@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int hcf(int,int);
+int main() {
+    int a, b, h;
+    cout<<"Enter Two Numbers : ";
+    cin>>a>>b;
+    h = hcf(a,b);
+    cout<<"HCF of "<<a<<" and "<<b<<" is : "<<h;
+
+    return 0;
+}
+int hcf(int x, int y) {
+    int r;
+    while (x % y != 0)
+    {
+        r = x % y; x = y ; y = r; 
+    }
+    return y;
+}
